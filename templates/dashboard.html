@@ -1,0 +1,8 @@
+{% extends 'base.html' %}{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4"><div><h2 class="fw-bold">Your workspace</h2><p class="text-muted mb-0">A quick overview of your files and activity.</p></div><a class="btn btn-primary" href="{{ url_for('files') }}">Manage files →</a></div>
+<div class="row g-3 mb-4">
+{% for label,value,icon in [('My files',files_count,'▤'),('Folders',folders_count,'▱'),('Storage used',(used|filesizeformat),'◫'),('Shared with me',shared_count,'⇄')] %}
+<div class="col-md-3"><div class="stat-card"><div class="stat-icon">{{ icon }}</div><div class="text-muted small">{{ label }}</div><div class="fs-3 fw-bold">{{ value }}</div></div></div>{% endfor %}
+</div>
+<div class="card p-4"><h5>Recent activity</h5>{% for log in activities %}<div class="activity-row"><span class="activity-dot"></span><div><strong>{{ log.action }}</strong><div class="small text-muted">{{ log.description }} · {{ log.timestamp.strftime('%d %b %Y %H:%M') }}</div></div></div>{% else %}<p class="text-muted mb-0">No activity yet. Upload your first file to get started.</p>{% endfor %}</div>
+{% endblock %}

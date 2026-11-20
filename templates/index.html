@@ -1,0 +1,10 @@
+{% extends 'base.html' %}{% block title %}CloudVault | Home{% endblock %}
+{% block content %}
+<section class="hero p-5 rounded-4">
+ <div class="row align-items-center"><div class="col-lg-7"><span class="eyebrow">YOUR FILES, ORGANIZED</span>
+ <h1 class="display-4 fw-bold mt-3">A simpler home for all your files.</h1>
+ <p class="lead text-secondary">Upload, organize, protect and share documents with a secure multi-user workspace.</p>
+ {% if current_user %}<a class="btn btn-primary btn-lg" href="{{ url_for('dashboard') }}">Open dashboard</a>{% else %}<a class="btn btn-primary btn-lg" href="{{ url_for('register') }}">Get started</a> <a class="btn btn-outline-secondary btn-lg" href="{{ url_for('login') }}">Sign in</a>{% endif %}
+ </div><div class="col-lg-5 text-center"><div class="cloud-art">☁</div><div class="small text-muted">Secure storage · Sharing · Activity history</div></div></div>
+</section>
+{% endblock %}

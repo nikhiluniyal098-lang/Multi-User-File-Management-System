@@ -1,0 +1,3 @@
+{% extends 'base.html' %}{% block content %}<p><a href="{{ url_for('files') }}">← My Files</a></p><h2>📁 {{ folder.folder_name }}</h2>
+<div class="row g-3">{% for child in folders %}<div class="col-md-3"><a class="folder-tile" href="{{ url_for('folder_view',folder_id=child.id) }}">📁 {{ child.folder_name }}</a></div>{% endfor %}</div>
+<div class="card mt-3"><table class="table mb-0"><tr><th>File</th><th>Size</th><th></th></tr>{% for f in files %}<tr><td>{{ f.original_filename }}</td><td>{{ f.file_size|filesizeformat }}</td><td><a href="{{ url_for('download',file_id=f.id) }}">Download</a></td></tr>{% else %}<tr><td colspan="3" class="text-muted">This folder is empty.</td></tr>{% endfor %}</table></div>{% endblock %}

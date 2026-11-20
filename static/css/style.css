@@ -1,0 +1,10 @@
+:root{--ink:#17233d;--muted:#6c7890;--blue:#4263eb;--pale:#f4f7ff}
+body{background:#f7f8fc;color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif}
+.topbar{background:#17233d;box-shadow:0 3px 18px #15213a22}.hero{background:linear-gradient(120deg,#eef2ff,#fff);border:1px solid #e4e9fb;min-height:360px}
+.eyebrow{letter-spacing:2px;color:#4263eb;font-size:.75rem;font-weight:700}.cloud-art{font-size:150px;color:#4263eb;line-height:1.2;text-shadow:0 15px 35px #4263eb33}
+.btn-primary{background:#4263eb;border-color:#4263eb}.btn-primary:hover{background:#304fc9;border-color:#304fc9}
+.auth-card{max-width:460px;border:0;box-shadow:0 12px 40px #1d2b4a12;border-radius:18px}
+.stat-card{background:white;border:1px solid #e9edf5;border-radius:16px;padding:22px;box-shadow:0 5px 18px #1d2b4a08}.stat-icon{font-size:24px;color:#4263eb;margin-bottom:10px}
+.card{border:1px solid #e9edf5;border-radius:16px;box-shadow:0 5px 18px #1d2b4a08}.folder-tile{display:block;background:white;border:1px solid #e9edf5;padding:18px;border-radius:12px;text-decoration:none;color:var(--ink);font-weight:600}.folder-tile:hover{border-color:#4263eb;background:#f7f8ff}
+.activity-row{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid #edf0f5}.activity-row:last-child{border:0}.activity-dot{width:9px;height:9px;border-radius:50%;background:#4263eb;margin-top:7px;flex:none}
+table a{text-decoration:none}.table thead th{color:#6c7890;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}
